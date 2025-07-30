@@ -1,0 +1,91 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Optional: If you decide to use custom fonts, import them here or in public/index.html
+  Example (using Google Fonts - remember to choose and link in index.html as well):
+  @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Share+Tech+Mono&display=swap');
+*/
+
+/* Global styles for the app - ensuring a consistent look */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* You can change 'Inter' to any font you link */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0D0D1A; /* synth-dark-primary from your Tailwind config */
+  color: #E6E6FA; /* synth-text-light from your Tailwind config */
+}
+
+/* Custom scrollbar for a themed look (optional) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A33; /* synth-dark-secondary */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8A2BE2; /* synth-accent-purple */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF00FF; /* synth-accent-magenta */
+}
+
+/* Base styles for range inputs (sliders) to make them more customizable */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #1A1A33; /* synth-dark-secondary */
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #1A1A33; /* synth-dark-secondary */
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -6px; /* Center thumb vertically */
+  background-color: #00FFFF; /* synth-accent-blue */
+  border: 2px solid #00FFFF;
+  border-radius: 9999px; /* Make it circular */
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0 5px #00FFFF; /* synth-glow-sm-blue */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #00FFFF; /* synth-accent-blue */
+  border: 2px solid #00FFFF;
+  border-radius: 9999px; /* Make it circular */
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0 5px #00FFFF; /* synth-glow-sm-blue */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: #FF00FF; /* synth-accent-magenta */
+  box-shadow: 0 0 8px #FF00FF; /* synth-glow-md-magenta */
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  background-color: #FF00FF; /* synth-accent-magenta */
+  box-shadow: 0 0 8px #FF00FF; /* synth-glow-md-magenta */
+}
